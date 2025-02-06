@@ -6,20 +6,6 @@ import Image from "next/image";
 import {HiUserCircle} from "react-icons/hi";
 
 function Header() {
-    // 👇️ Toggle class on click Show And Hide Menu Bar (Button)
-    const [isMenuVisible, setMenuVisible] = useState(false);
-    const handleClick = () => {
-        const nav = document.getElementById('mobile_menu');
-        if (nav) {
-            if (isMenuVisible) {
-                nav.classList.remove('show_menu');
-            } else {
-                nav.classList.add('show_menu');
-            }
-            setMenuVisible(!isMenuVisible);
-        }
-    };
-
     // 👇️ Toggle class on click Show And Hide Account (Icon)
     const [isAccountVisible, setAccountVisible] = useState(false);
     const handleAccountClick = () => {
