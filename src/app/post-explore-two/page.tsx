@@ -1,12 +1,7 @@
 "use client";
 import React from 'react';
-import Skeleton from "react-loading-skeleton";
-import LoadImg from '../../../public/assets/images/load.png';
-import Image from "next/image";
-import useLoading from "@/app/useLoading";
 
 function Page() {
-    const loading = useLoading();
     return (
         <>
             <section id="post_explore_section" className="pt-[50px] pb-8">
