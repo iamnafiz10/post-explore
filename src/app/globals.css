@@ -113,10 +113,35 @@ input {
 }
 
 /* ------------------- Modal --------------------- */
+.modal_cntrl .bg-white {
+    background: white !important;
+}
+
+.modal_cntrl button:hover {
+    background: rgb(229 231 235) !important;
+    color: black;
+}
+
 .rounded-lg .border-b {
     align-items: center !important;
 }
 
 .rounded-lg button {
     outline: none !important;
+}
+
+.modal_body input {
+    outline: none !important;
+    border: 1px solid #a1a1a1db;
+    background: #fafafaba;
+    color: #39393B !important;
+}
+
+.modal_body select {
+    border: 1px solid rgba(161, 161, 161, 0.86);
+    color: #39393B !important;
+}
+
+.modal_cntrl .max-w-lg {
+    border-radius: 10px !important;
 }
