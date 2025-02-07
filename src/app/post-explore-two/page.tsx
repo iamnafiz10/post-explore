@@ -49,7 +49,7 @@ function Page() {
                                     </div>
                                 </>
                             ) : (
-                                <h4 className="text-center text-[14px] text-graycolor">
+                                <h4 className="text-center text-[14px] text-prgcolor">
                                     Here’s how the content will appear when this link is shared:
                                 </h4>
                             )}
@@ -92,7 +92,7 @@ function Page() {
                             ) : (
                                 <>
                                     <div
-                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center gap-10 py-3 px-4 ">
+                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div className="col col-span-3 icon_wrap flex items-center gap-1 text-red-500">
                                             <div className="icon">
                                                 <GoAlertFill size={17} className=""/>
@@ -109,7 +109,7 @@ function Page() {
                                         </div>
                                     </div>
                                     <div
-                                        className="top_wrapper border border-t-0 rounded-b block md:grid grid-cols-12 items-center gap-10 py-3 px-4">
+                                        className="top_wrapper border border-t-0 rounded-b block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div className="col col-span-3 icon_wrap flex items-center gap-1 text-red-500">
                                             <div className="icon">
                                                 <GoAlertFill size={17}/>
@@ -142,7 +142,7 @@ function Page() {
                             ) : (
                                 <>
                                     <div
-                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center py-3 px-4">
+                                        className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border rounded-t block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
                                             <h4 className="text-[14px] text-prgcolor font-[500]">Last scraped</h4>
                                         </div>
@@ -152,38 +152,40 @@ function Page() {
                                             </h4>
                                         </div>
                                     </div>
+
                                     <div
-                                        className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        className="top_wrapper group cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Fetched URL</h4>
                                         </div>
                                         <div className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] text-primary">
-                                                https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
-                                        <div
-                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px] font-[500]">Canonical URL</h4>
-                                        </div>
-                                        <div className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] text-primary">
+                                            <Link href='#' className="text-[14px] text-primary group-hover:underline">
                                                 https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
                                             </Link>
                                         </div>
                                     </div>
 
                                     <div
-                                        className="top_wrapper border border-t-0 rounded-b block md:grid grid-cols-12 items-center gap-4 px-4">
+                                        className="top_wrapper group cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px] font-[500]">Response Code</h4>
+                                            <h4 className="text-[14px] font-[500]">Canonical URL</h4>
                                         </div>
                                         <div className="col md:col-span-9 text_wrap cursor-pointer">
+                                            <Link href='#' className="text-[14px] group-hover:underline text-primary">
+                                                https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border border-t-0 rounded-b block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Response Code</h4>
+                                        </div>
+                                        <div className="col md:col-span-9 text_wrap">
                                             <h4 className="text-[14px] text-green-400">
                                                 200
                                             </h4>
@@ -208,7 +210,7 @@ function Page() {
                             ) : (
                                 <>
                                     <div
-                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                        className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border rounded-t block md:grid grid-cols-12 items-center py-3 px-4 ">
                                         <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
                                             <h4 className="text-[14px] text-prgcolor font-[500]">Property</h4>
                                         </div>
@@ -219,21 +221,21 @@ function Page() {
                                         </div>
                                     </div>
                                     <div onClick={() => setOpenStartUrlModal(true)}
-                                         className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                         className="top_wrapper group cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">URL (og:url) </h4>
                                         </div>
                                         <div
                                             className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] text-primary">
+                                            <Link href='#' className="text-[14px] group-hover:underline text-primary">
                                                 https://www.nosres.com
                                             </Link>
                                         </div>
                                     </div>
 
                                     <div onClick={() => setOpenStartTitleModal(true)}
-                                         className="top_wrapper cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                         className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4 ">
                                         <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
                                             <h4 className="text-[14px] text-prgcolor font-[500]">Title (og:title)</h4>
                                         </div>
@@ -246,7 +248,7 @@ function Page() {
                                     </div>
 
                                     <div onClick={() => setOpenStartTypeModal(true)}
-                                         className="top_wrapper cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                         className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4 ">
                                         <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
                                             <h4 className="text-[14px] text-prgcolor font-[500]">Type (og:type)</h4>
                                         </div>
@@ -259,21 +261,21 @@ function Page() {
                                     </div>
 
                                     <div onClick={() => setOpenStartImageModal(true)}
-                                         className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                         className="top_wrapper group hover:bg-[#F4F9FF] cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Image (og:image)</h4>
                                         </div>
                                         <div
                                             className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] text-primary">
+                                            <Link href='#' className="text-[14px] group-hover:underline text-primary">
                                                 https://blog.nosres.com/_next/static/media/logo.e1f0ef5f.svg
                                             </Link>
                                         </div>
                                     </div>
 
                                     <div onClick={() => setOpenStartDescriptionModal(true)}
-                                         className="top_wrapper cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                         className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Description (og:description)</h4>
@@ -287,7 +289,7 @@ function Page() {
                                     </div>
 
                                     <div onClick={() => setOpenStartAuthorModal(true)}
-                                         className="top_wrapper cursor-pointer border border-t-0 rounded-b block md:grid grid-cols-12 items-center py-3 px-4">
+                                         className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border border-t-0 rounded-b block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Author (og:author)</h4>
@@ -344,8 +346,7 @@ function Page() {
                         </h4>
                         <div className="mt-4 bg-[#FBFBFB] rounded w-full py-4 px-3 border text-prgcolor text-[14px]">
                             <h4>
-                                {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
-                                <span className="text-red-500">&lt;meta</span> <span
+                                &lt;<span className="text-red-500">meta</span> <span
                                 className="text-amber-700">name</span> =<span
                                 className="text-green-600">{`"url"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
@@ -396,8 +397,7 @@ function Page() {
                         </h4>
                         <div className="mt-4 bg-[#FBFBFB] rounded w-full py-4 px-3 border text-prgcolor text-[14px]">
                             <h4>
-                                {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
-                                <span className="text-red-500">&lt;meta</span> <span
+                                &lt;<span className="text-red-500">meta</span> <span
                                 className="text-amber-700">name</span> =<span
                                 className="text-green-600">{`"title"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
@@ -448,8 +448,7 @@ function Page() {
                         </h4>
                         <div className="mt-4 bg-[#FBFBFB] rounded w-full py-4 px-3 border text-prgcolor text-[14px]">
                             <h4>
-                                {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
-                                <span className="text-red-500">&lt;meta</span> <span
+                                &lt;<span className="text-red-500">meta</span> <span
                                 className="text-amber-700">name</span> =<span
                                 className="text-green-600">{`"type"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
@@ -500,8 +499,7 @@ function Page() {
                         </h4>
                         <div className="mt-4 bg-[#FBFBFB] rounded w-full py-4 px-3 border text-prgcolor text-[14px]">
                             <h4>
-                                {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
-                                <span className="text-red-500">&lt;meta</span> <span
+                                &lt;<span className="text-red-500">meta</span> <span
                                 className="text-amber-700">name</span> =<span
                                 className="text-green-600">{`"image"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
@@ -552,8 +550,7 @@ function Page() {
                         </h4>
                         <div className="mt-4 bg-[#FBFBFB] rounded w-full py-4 px-3 border text-prgcolor text-[14px]">
                             <h4>
-                                {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
-                                <span className="text-red-500">&lt;meta</span> <span
+                                &lt;<span className="text-red-500">meta</span> <span
                                 className="text-amber-700">name</span> =<span
                                 className="text-green-600">{`"description"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
@@ -604,8 +601,7 @@ function Page() {
                         </h4>
                         <div className="mt-4 bg-[#FBFBFB] rounded w-full py-4 px-3 border text-prgcolor text-[14px]">
                             <h4>
-                                {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
-                                <span className="text-red-500">&lt;meta</span> <span
+                                &lt;<span className="text-red-500">meta</span> <span
                                 className="text-amber-700">name</span> =<span
                                 className="text-green-600">{`"author"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
