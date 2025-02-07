@@ -49,11 +49,11 @@ function Page() {
                                 </div>
                             </>
                         ) : (
-                            <div className="px-8 mt-4 block md:flex items-center">
-                                <h4 className="text-[14px] text-prgcolor">
+                            <div className="mt-4 px-8 block md:grid grid-cols-12 gap-8 items-center">
+                                <h4 className="col col-span-3 text-[14px] text-prgcolor">
                                     Here’s how the content will appear when this link is shared:
                                 </h4>
-                                <div className="post_image px-0 md:px-4 bg-white flex justify-start mt-4">
+                                <div className="col col-span-9 post_image bg-white flex justify-start mt-4">
                                     <div
                                         className="w-full md:w-[70%] flex items-center cursor-pointer gap-3 bg-[#F3F4F6] rounded px-4 py-3">
 
