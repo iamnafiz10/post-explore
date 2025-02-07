@@ -32,7 +32,7 @@ function Header() {
                         <div className="logo">
                             <Link href='/' className="flex items-center gap-2">
                                 <Image src={LogoImg} className="h-10 w-7" alt="LogoImg"/>
-                                <span className="text-white text-[16px]">Post Explorer</span>
+                                <span className="text-white text-[16px] font-[500]">Post Explorer</span>
                             </Link>
                         </div>
 

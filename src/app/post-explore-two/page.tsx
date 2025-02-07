@@ -38,8 +38,8 @@ function Page() {
                     </div>
                 </div>
                 <div className="container mt-8">
-                    <div className="link_card bg-white rounded pt-3 pb-10">
-                        <h4 className="mb-2 px-8 text-prgcolor text-[16px]">Link Preview</h4>
+                    <div className="link_card bg-white rounded border pt-3 pb-10">
+                        <h4 className="mb-2 px-8 text-prgcolor text-[16px] font-[500]">Link Preview</h4>
                         <hr/>
                         <div className="px-8 mt-4">
                             {loading ? (
@@ -79,8 +79,8 @@ function Page() {
                         </div>
                     </div>
 
-                    <div className="error_card bg-white rounded mt-6 pt-3 pb-5">
-                        <h4 className="mb-2 px-8 text-prgcolor text-[16px]">Error Warnings</h4>
+                    <div className="error_card bg-white rounded border mt-6 pt-3 pb-5">
+                        <h4 className="mb-2 px-8 text-prgcolor text-[16px] font-[500]">Error Warnings</h4>
                         <hr/>
                         <div className="px-8 mt-4">
                             {loading ? (
@@ -91,14 +91,15 @@ function Page() {
                                 </>
                             ) : (
                                 <>
-                                    <div className="top_wrapper border rounded-t flex items-center gap-10 py-3 px-4 ">
-                                        <div className="icon_wrap flex items-center gap-1 text-red-500">
+                                    <div
+                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center gap-10 py-3 px-4 ">
+                                        <div className="col col-span-3 icon_wrap flex items-center gap-1 text-red-500">
                                             <div className="icon">
                                                 <GoAlertFill size={17} className=""/>
                                             </div>
                                             <h4 className="text-[14px]">Warning</h4>
                                         </div>
-                                        <div className="text_wrap">
+                                        <div className="col col-span-9 text_wrap">
                                             <h4 className="text-[14px] text-prgcolor">
                                                 The {`'og:image'`} property should be explicitly provided, even if a
                                                 value
@@ -108,14 +109,14 @@ function Page() {
                                         </div>
                                     </div>
                                     <div
-                                        className="top_wrapper border border-t-0 rounded-b flex items-center gap-10 py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-red-500">
+                                        className="top_wrapper border border-t-0 rounded-b block md:grid grid-cols-12 items-center gap-10 py-3 px-4">
+                                        <div className="col col-span-3 icon_wrap flex items-center gap-1 text-red-500">
                                             <div className="icon">
                                                 <GoAlertFill size={17}/>
                                             </div>
                                             <h4 className="text-[14px]">Warning</h4>
                                         </div>
-                                        <div className="text_wrap">
+                                        <div className="col col-span-9 text_wrap">
                                             <h4 className="text-[14px] text-prgcolor">
                                                 Add an og:description tag to the page to have control over
                                                 the {`content's`}
@@ -128,8 +129,8 @@ function Page() {
                         </div>
                     </div>
 
-                    <div className="url_card bg-white rounded mt-6 pt-3 pb-5">
-                        <h4 className="mb-2 px-8 text-prgcolor text-[16px]">URL Details</h4>
+                    <div className="url_card bg-white rounded border mt-6 pt-3 pb-5">
+                        <h4 className="mb-2 px-8 text-prgcolor text-[16px] font-[500]">URL Details</h4>
                         <hr/>
                         <div className="px-8 mt-4">
                             {loading ? (
@@ -141,33 +142,35 @@ function Page() {
                             ) : (
                                 <>
                                     <div
-                                        className="top_wrapper border rounded-t block md:flex items-center gap-4 md:gap-[69px] py-3 px-4 ">
-                                        <div className="icon_wrap flex items-center gap-1">
-                                            <h4 className="text-[14px] text-prgcolor">Last scraped</h4>
+                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
+                                            <h4 className="text-[14px] text-prgcolor font-[500]">Last scraped</h4>
                                         </div>
-                                        <div className="text_wrap">
+                                        <div className="col md:col-span-9 text_wrap">
                                             <h4 className="text-[14px] text-prgcolor">
                                                 3 hours ago
                                             </h4>
                                         </div>
                                     </div>
                                     <div
-                                        className="top_wrapper hover:bg-[#F4F9FF] border border-t-0 block md:flex items-center gap-4 md:gap-[70px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">Fetched URL</h4>
+                                        className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Fetched URL</h4>
                                         </div>
-                                        <div className="text_wrap cursor-pointer">
+                                        <div className="col md:col-span-9 text_wrap cursor-pointer">
                                             <Link href='#' className="text-[14px] text-primary">
                                                 https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
                                             </Link>
                                         </div>
                                     </div>
                                     <div
-                                        className="top_wrapper hover:bg-[#F4F9FF] border border-t-0 block md:flex items-center gap-4 md:gap-[59px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">Canonical URL</h4>
+                                        className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Canonical URL</h4>
                                         </div>
-                                        <div className="text_wrap cursor-pointer">
+                                        <div className="col md:col-span-9 text_wrap cursor-pointer">
                                             <Link href='#' className="text-[14px] text-primary">
                                                 https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
                                             </Link>
@@ -175,11 +178,12 @@ function Page() {
                                     </div>
 
                                     <div
-                                        className="top_wrapper border border-t-0 rounded-b block md:flex items-center gap-4 md:gap-[53px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">Response Code</h4>
+                                        className="top_wrapper border border-t-0 rounded-b block md:grid grid-cols-12 items-center gap-4 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Response Code</h4>
                                         </div>
-                                        <div className="text_wrap cursor-pointer">
+                                        <div className="col md:col-span-9 text_wrap cursor-pointer">
                                             <h4 className="text-[14px] text-green-400">
                                                 200
                                             </h4>
@@ -190,8 +194,9 @@ function Page() {
                         </div>
                     </div>
 
-                    <div className="metadata_card bg-white rounded mt-6 pt-3 pb-5">
-                        <h4 className="mb-2 px-8 text-prgcolor text-[16px]">Metadata Collected for This Page:</h4>
+                    <div className="metadata_card bg-white rounded border mt-6 pt-3 pb-5">
+                        <h4 className="mb-2 px-8 text-prgcolor text-[16px] font-[500]">Metadata Collected for This
+                            Page:</h4>
                         <hr/>
                         <div className="px-8 mt-4">
                             {loading ? (
@@ -203,88 +208,92 @@ function Page() {
                             ) : (
                                 <>
                                     <div
-                                        className="top_wrapper border rounded-t block md:flex items-center gap-4 md:gap-[172px] py-3 px-4 ">
-                                        <div className="icon_wrap flex items-center gap-1">
-                                            <h4 className="text-[14px] text-prgcolor">Property</h4>
+                                        className="top_wrapper border rounded-t block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                        <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
+                                            <h4 className="text-[14px] text-prgcolor font-[500]">Property</h4>
                                         </div>
-                                        <div className="text_wrap">
+                                        <div className="col md:col-span-9 text_wrap">
                                             <h4 className="text-[14px] text-prgcolor">
                                                 Value
                                             </h4>
                                         </div>
                                     </div>
-                                    <div
-                                        className="top_wrapper hover:bg-[#F4F9FF] border border-t-0 block md:flex items-center gap-4 md:gap-[152px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">URL (og:url) </h4>
+                                    <div onClick={() => setOpenStartUrlModal(true)}
+                                         className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">URL (og:url) </h4>
                                         </div>
-                                        <div onClick={() => setOpenStartUrlModal(true)}
-                                             className="text_wrap cursor-pointer">
+                                        <div
+                                            className="col md:col-span-9 text_wrap cursor-pointer">
                                             <Link href='#' className="text-[14px] text-primary">
                                                 https://www.nosres.com
                                             </Link>
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="top_wrapper border border-t-0 block md:flex items-center gap-4 md:gap-[142px] py-3 px-4 ">
-                                        <div className="icon_wrap flex items-center gap-1">
-                                            <h4 className="text-[14px] text-prgcolor">Title (og:title)</h4>
+                                    <div onClick={() => setOpenStartTitleModal(true)}
+                                         className="top_wrapper cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                        <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
+                                            <h4 className="text-[14px] text-prgcolor font-[500]">Title (og:title)</h4>
                                         </div>
-                                        <div onClick={() => setOpenStartTitleModal(true)}
-                                             className="text_wrap cursor-pointer">
+                                        <div
+                                            className="col md:col-span-9 text_wrap cursor-pointer">
                                             <h4 className="text-[14px] text-prgcolor">
                                                 Tips for Selling Like-New Products Like a Pro
                                             </h4>
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="top_wrapper border border-t-0 block md:flex items-center gap-4 md:gap-[137px] py-3 px-4 ">
-                                        <div className="icon_wrap flex items-center gap-1">
-                                            <h4 className="text-[14px] text-prgcolor">Type (og:type)</h4>
+                                    <div onClick={() => setOpenStartTypeModal(true)}
+                                         className="top_wrapper cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                        <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
+                                            <h4 className="text-[14px] text-prgcolor font-[500]">Type (og:type)</h4>
                                         </div>
-                                        <div onClick={() => setOpenStartTypeModal(true)}
-                                             className="text_wrap cursor-pointer">
+                                        <div
+                                            className="col md:col-span-9 text_wrap cursor-pointer">
                                             <h4 className="text-[14px] text-prgcolor">
                                                 Article
                                             </h4>
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="top_wrapper hover:bg-[#F4F9FF] border border-t-0 block md:flex items-center gap-4 md:gap-[116px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">Image (og:image)</h4>
+                                    <div onClick={() => setOpenStartImageModal(true)}
+                                         className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Image (og:image)</h4>
                                         </div>
-                                        <div onClick={() => setOpenStartImageModal(true)}
-                                             className="text_wrap cursor-pointer">
+                                        <div
+                                            className="col md:col-span-9 text_wrap cursor-pointer">
                                             <Link href='#' className="text-[14px] text-primary">
                                                 https://blog.nosres.com/_next/static/media/logo.e1f0ef5f.svg
                                             </Link>
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="top_wrapper border border-t-0 block md:flex items-center gap-4 md:gap-[53px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">Description (og:description)</h4>
+                                    <div onClick={() => setOpenStartDescriptionModal(true)}
+                                         className="top_wrapper cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Description (og:description)</h4>
                                         </div>
-                                        <div onClick={() => setOpenStartDescriptionModal(true)}
-                                             className="text_wrap cursor-pointer">
+                                        <div
+                                            className="col md:col-span-9 text_wrap cursor-pointer">
                                             <h4 className="text-[14px] text-red-500">
                                                 No description found
                                             </h4>
                                         </div>
                                     </div>
 
-                                    <div
-                                        className="top_wrapper border border-t-0 rounded-b block md:flex items-center gap-4 md:gap-[112px] py-3 px-4">
-                                        <div className="icon_wrap flex items-center gap-1 text-prgcolor">
-                                            <h4 className="text-[14px]">Author (og:author)</h4>
+                                    <div onClick={() => setOpenStartAuthorModal(true)}
+                                         className="top_wrapper cursor-pointer border border-t-0 rounded-b block md:grid grid-cols-12 items-center py-3 px-4">
+                                        <div
+                                            className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
+                                            <h4 className="text-[14px] font-[500]">Author (og:author)</h4>
                                         </div>
-                                        <div onClick={() => setOpenStartAuthorModal(true)}
-                                             className="text_wrap cursor-pointer">
+                                        <div
+                                            className="col md:col-span-9 text_wrap cursor-pointer">
                                             <h4 className="text-[14px] text-red-500">
                                                 No description found
                                             </h4>
@@ -326,7 +335,7 @@ function Page() {
                         <h4 className="text-graycolor text-[14px]">
                             This value is taken directly from the Open Graph tag provided on the page.
                         </h4>
-                        <h4 className="text-[14px] text-prgcolor mt-4">
+                        <h4 className="text-[14px] text-prgcolor mt-4 font-[500]">
                             How to Update the URL
                         </h4>
                         <h4 className="text-graycolor text-[14px] mt-1">
@@ -378,7 +387,7 @@ function Page() {
                         <h4 className="text-graycolor text-[14px]">
                             This value is taken directly from the Open Graph tag provided on the page.
                         </h4>
-                        <h4 className="text-[14px] text-prgcolor mt-4">
+                        <h4 className="text-[14px] text-prgcolor mt-4 font-[500]">
                             How to Update the Title
                         </h4>
                         <h4 className="text-graycolor text-[14px] mt-1">
@@ -430,7 +439,7 @@ function Page() {
                         <h4 className="text-graycolor text-[14px]">
                             This value is taken directly from the Open Graph tag provided on the page.
                         </h4>
-                        <h4 className="text-[14px] text-prgcolor mt-4">
+                        <h4 className="text-[14px] text-prgcolor mt-4 font-[500]">
                             How to Update the Type
                         </h4>
                         <h4 className="text-graycolor text-[14px] mt-1">
@@ -482,7 +491,7 @@ function Page() {
                         <h4 className="text-graycolor text-[14px]">
                             This value is taken directly from the Open Graph tag provided on the page.
                         </h4>
-                        <h4 className="text-[14px] text-prgcolor mt-4">
+                        <h4 className="text-[14px] text-prgcolor mt-4 font-[500]">
                             How to Update the Image
                         </h4>
                         <h4 className="text-graycolor text-[14px] mt-1">
@@ -534,7 +543,7 @@ function Page() {
                         <h4 className="text-graycolor text-[14px]">
                             This value is taken directly from the Open Graph tag provided on the page.
                         </h4>
-                        <h4 className="text-[14px] text-prgcolor mt-4">
+                        <h4 className="text-[14px] text-prgcolor mt-4 font-[500]">
                             How to Update the Image
                         </h4>
                         <h4 className="text-graycolor text-[14px] mt-1">
@@ -586,7 +595,7 @@ function Page() {
                         <h4 className="text-graycolor text-[14px]">
                             This value is taken directly from the Open Graph tag provided on the page.
                         </h4>
-                        <h4 className="text-[14px] text-prgcolor mt-4">
+                        <h4 className="text-[14px] text-prgcolor mt-4 font-[500]">
                             How to Update the Image
                         </h4>
                         <h4 className="text-graycolor text-[14px] mt-1">
