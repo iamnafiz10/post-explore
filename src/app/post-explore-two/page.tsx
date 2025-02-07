@@ -41,42 +41,34 @@ function Page() {
                     <div className="link_card bg-white rounded border pt-3 pb-10">
                         <h4 className="mb-2 px-8 text-prgcolor text-[16px] font-[500]">Link Preview</h4>
                         <hr/>
-                        <div className="px-8 mt-4">
-                            {loading ? (
-                                <>
-                                    <div className="text-center">
-                                        <Skeleton height={10} width={300} count={1}/>
-                                    </div>
-                                </>
-                            ) : (
-                                <h4 className="text-center text-[14px] text-prgcolor">
+                        {loading ? (
+                            <>
+                                <div className="box px-8 mt-4">
+                                    <Skeleton height={60} count={1}/>
+                                    <Skeleton height={20} count={1}/>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="px-8 mt-4 block md:flex items-center">
+                                <h4 className="text-[14px] text-prgcolor">
                                     Here’s how the content will appear when this link is shared:
                                 </h4>
-                            )}
-                            <div className="post_image px-4 bg-white flex justify-center mt-4">
-                                <div
-                                    className="w-full md:w-[50%] flex items-center cursor-pointer gap-3 bg-[#F3F4F6] rounded px-4 py-3">
-                                    {loading ? (
-                                        <>
-                                            <div className="box mt-0">
-                                                <Skeleton height={40} count={1}/>
-                                            </div>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Image src={SliderOneImg} className="w-[18%] rounded" alt="PostImg"/>
-                                            <div className="content_area">
-                                                <h4 className="text-[14px] text-black font-[500]">
-                                                    Experience the cutting-edge technology of the iPhone
-                                                    16 Pro, now available in pristine, like-new condition...
-                                                </h4>
-                                                <h4 className="text-graycolor text-[14px]">blends.nosres.com</h4>
-                                            </div>
-                                        </>
-                                    )}
+                                <div className="post_image px-0 md:px-4 bg-white flex justify-start mt-4">
+                                    <div
+                                        className="w-full md:w-[70%] flex items-center cursor-pointer gap-3 bg-[#F3F4F6] rounded px-4 py-3">
+
+                                        <Image src={SliderOneImg} className="w-[18%] rounded" alt="PostImg"/>
+                                        <div className="content_area">
+                                            <h4 className="text-[14px] text-black font-[500]">
+                                                Experience the cutting-edge technology of the iPhone
+                                                16 Pro, now available in pristine, like-new condition...
+                                            </h4>
+                                            <h4 className="text-graycolor text-[14px]">blends.nosres.com</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
 
                     <div className="error_card bg-white rounded border mt-6 pt-3 pb-5">
@@ -154,26 +146,26 @@ function Page() {
                                     </div>
 
                                     <div
-                                        className="top_wrapper group cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Fetched URL</h4>
                                         </div>
                                         <div className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] text-primary group-hover:underline">
+                                            <Link href='#' className="text-[14px] text-primary hover:underline">
                                                 https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
                                             </Link>
                                         </div>
                                     </div>
 
                                     <div
-                                        className="top_wrapper group cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                        className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Canonical URL</h4>
                                         </div>
                                         <div className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] group-hover:underline text-primary">
+                                            <Link href='#' className="text-[14px] hover:underline text-primary">
                                                 https://blog.nosres.com/article/tips-for-selling-like-new-products-like-a-pro
                                             </Link>
                                         </div>
@@ -210,7 +202,7 @@ function Page() {
                             ) : (
                                 <>
                                     <div
-                                        className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border rounded-t block md:grid grid-cols-12 items-center py-3 px-4 ">
+                                        className="top_wrapper cursor-pointer border rounded-t block md:grid grid-cols-12 items-center py-3 px-4 ">
                                         <div className="col md:col-span-3 icon_wrap flex items-center gap-1">
                                             <h4 className="text-[14px] text-prgcolor font-[500]">Property</h4>
                                         </div>
@@ -221,14 +213,14 @@ function Page() {
                                         </div>
                                     </div>
                                     <div onClick={() => setOpenStartUrlModal(true)}
-                                         className="top_wrapper group cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                         className="top_wrapper cursor-pointer hover:bg-[#F4F9FF] border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">URL (og:url) </h4>
                                         </div>
                                         <div
                                             className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] group-hover:underline text-primary">
+                                            <Link href='#' className="text-[14px] hover:underline text-primary">
                                                 https://www.nosres.com
                                             </Link>
                                         </div>
@@ -261,14 +253,14 @@ function Page() {
                                     </div>
 
                                     <div onClick={() => setOpenStartImageModal(true)}
-                                         className="top_wrapper group hover:bg-[#F4F9FF] cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
+                                         className="top_wrapper hover:bg-[#F4F9FF] cursor-pointer border border-t-0 block md:grid grid-cols-12 items-center py-3 px-4">
                                         <div
                                             className="col md:col-span-3 icon_wrap flex items-center gap-1 text-prgcolor">
                                             <h4 className="text-[14px] font-[500]">Image (og:image)</h4>
                                         </div>
                                         <div
                                             className="col md:col-span-9 text_wrap cursor-pointer">
-                                            <Link href='#' className="text-[14px] group-hover:underline text-primary">
+                                            <Link href='#' className="text-[14px] hover:underline text-primary">
                                                 https://blog.nosres.com/_next/static/media/logo.e1f0ef5f.svg
                                             </Link>
                                         </div>
