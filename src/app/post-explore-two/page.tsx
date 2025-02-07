@@ -100,7 +100,8 @@ function Page() {
                                         </div>
                                         <div className="text_wrap">
                                             <h4 className="text-[14px] text-prgcolor">
-                                                The 'og:image' property should be explicitly provided, even if a value
+                                                The {`'og:image'`} property should be explicitly provided, even if a
+                                                value
                                                 can be
                                                 inferred from other tags.
                                             </h4>
@@ -110,13 +111,14 @@ function Page() {
                                         className="top_wrapper border border-t-0 rounded-b flex items-center gap-10 py-3 px-4">
                                         <div className="icon_wrap flex items-center gap-1 text-red-500">
                                             <div className="icon">
-                                                <GoAlertFill size={17} className=""/>
+                                                <GoAlertFill size={17}/>
                                             </div>
                                             <h4 className="text-[14px]">Warning</h4>
                                         </div>
                                         <div className="text_wrap">
                                             <h4 className="text-[14px] text-prgcolor">
-                                                Add an og:description tag to the page to have control over the content's
+                                                Add an og:description tag to the page to have control over
+                                                the {`content's`}
                                                 description on Blends.
                                             </h4>
                                         </div>
@@ -335,10 +337,12 @@ function Page() {
                             <h4>
                                 {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
                                 <span className="text-red-500">&lt;meta</span> <span
-                                className="text-amber-700">name</span> =<span className="text-green-600">"url"</span>
+                                className="text-amber-700">name</span> =<span
+                                className="text-green-600">{`"url"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
-                                className="text-green-600">"og:url"</span> <span
-                                className="text-amber-700">content</span>=<span className="text-green-600">"[Add URL here]"</span>&gt;
+                                className="text-green-600">{`"og:url"`}</span> <span
+                                className="text-amber-700">content</span>=<span
+                                className="text-green-600">{`"[Add URL here]"`}</span>&gt;
                             </h4>
                         </div>
                     </div>
@@ -385,10 +389,12 @@ function Page() {
                             <h4>
                                 {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
                                 <span className="text-red-500">&lt;meta</span> <span
-                                className="text-amber-700">name</span> =<span className="text-green-600">"title"</span>
+                                className="text-amber-700">name</span> =<span
+                                className="text-green-600">{`"title"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
-                                className="text-green-600">"og:title"</span> <span
-                                className="text-amber-700">content</span>=<span className="text-green-600">"[Add title here]"</span>&gt;
+                                className="text-green-600">{`"og:title"`}</span> <span
+                                className="text-amber-700">content</span>=<span
+                                className="text-green-600">{`"[Add title here]"`}</span>&gt;
                             </h4>
                         </div>
                     </div>
@@ -435,10 +441,12 @@ function Page() {
                             <h4>
                                 {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
                                 <span className="text-red-500">&lt;meta</span> <span
-                                className="text-amber-700">name</span> =<span className="text-green-600">"type"</span>
+                                className="text-amber-700">name</span> =<span
+                                className="text-green-600">{`"type"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
-                                className="text-green-600">"og:type"</span> <span
-                                className="text-amber-700">content</span>=<span className="text-green-600">"[Add type here]"</span>&gt;
+                                className="text-green-600">{`"og:type"`}</span> <span
+                                className="text-amber-700">content</span>=<span
+                                className="text-green-600">{`"[Add type here]"`}</span>&gt;
                             </h4>
                         </div>
                     </div>
@@ -485,10 +493,12 @@ function Page() {
                             <h4>
                                 {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
                                 <span className="text-red-500">&lt;meta</span> <span
-                                className="text-amber-700">name</span> =<span className="text-green-600">"image"</span>
+                                className="text-amber-700">name</span> =<span
+                                className="text-green-600">{`"image"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
-                                className="text-green-600">"og:image"</span> <span
-                                className="text-amber-700">content</span>=<span className="text-green-600">"[Add image here]"</span>&gt;
+                                className="text-green-600">{`"og:image"`}</span> <span
+                                className="text-amber-700">content</span>=<span
+                                className="text-green-600">{`"[Add image here]"`}</span>&gt;
                             </h4>
                         </div>
                     </div>
@@ -536,10 +546,11 @@ function Page() {
                                 {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
                                 <span className="text-red-500">&lt;meta</span> <span
                                 className="text-amber-700">name</span> =<span
-                                className="text-green-600">"description"</span>
+                                className="text-green-600">{`"description"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
-                                className="text-green-600">"og:description"</span> <span
-                                className="text-amber-700">content</span>=<span className="text-green-600">"[Add description here]"</span>&gt;
+                                className="text-green-600">{`"og:description"`}</span> <span
+                                className="text-amber-700">content</span>=<span
+                                className="text-green-600">{`"[Add description here]"`}</span>&gt;
                             </h4>
                         </div>
                     </div>
@@ -586,10 +597,12 @@ function Page() {
                             <h4>
                                 {/*<meta name="url" property="og:url" content="[Add URL here]"/>*/}
                                 <span className="text-red-500">&lt;meta</span> <span
-                                className="text-amber-700">name</span> =<span className="text-green-600">"author"</span>
+                                className="text-amber-700">name</span> =<span
+                                className="text-green-600">{`"author"`}</span>
                                 <span className="text-amber-700"> property</span> =<span
-                                className="text-green-600">"og:author"</span> <span
-                                className="text-amber-700">content</span>=<span className="text-green-600">"[Add author here]"</span>&gt;
+                                className="text-green-600">{`"og:author"`}</span> <span
+                                className="text-amber-700">content</span>=<span
+                                className="text-green-600">{`"[Add author here]"`}</span>&gt;
                             </h4>
                         </div>
                     </div>
